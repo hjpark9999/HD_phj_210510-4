@@ -7,15 +7,19 @@ void main()
 	int myArray[5];
 	int i, j;
 
+	for (i = 0; i <5; i++) {
+		myArray[i] = numberArray[i];
+	}
+
 	for ( i =0; i< 5; i++) {
 		for ( j = 0; j < 4; j++) {
-			if (numberArray[j] > numberArray[j+1])
-				CallByRef(&numberArray[j], &numberArray[j+1]);
+			if (myArray[j] > myArray[j+1])
+				CallByRef(&myArray[j], &myArray[j+1]);
 		}
 	}
 
 	for ( i=0;i<5;i++)
-		printf("%4d", numberArray[i]);
+		printf("%4d", myArray[i]);
 
 	fgetc(stdin);
 
